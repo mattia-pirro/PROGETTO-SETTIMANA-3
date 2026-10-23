@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatt</title>
+    <link rel="icon" href="assets/img/cinema.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1><i class="fa-solid fa-film"></i>CineMatt</h1>
+            </div>
+            <div class="header-button">
+                <a href="index-scuro.html"><button class="mode-btn"><i class="fa-solid fa-moon"></i></button></a>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <h5>Crea la tua lista di Film e aggiungi quelli che hai visto e che vuoi vedere.</h5>
+    </section>
+    <main class="container">
+        <section class="card">
+            <h3>Aggiungi un film</h3>
+            <form>
+                <input id="titolo" type="text" placeholder="Titolo" required>
+                <input id="regista" type="text" placeholder="Regista" required>
+                <input id="categoria" type="text" placeholder="Categoria" required>
+                <input id="anno" type="number" placeholder="Anno di uscita" required>
+                <select id="rating" required>
+                    <option value="Seleziona..">Seleziona..</option>
+                    <option value="5☆">5☆</option>
+                    <option value="4☆">4☆</option>
+                    <option value="3☆">3☆</option>
+                    <option value="2☆">2☆</option>
+                    <option value="1☆">1☆</option>
+                </select>
+                <select id="scelta" required>
+                    <option value="Seleziona..">Seleziona..</option>
+                    <option value="Da vedere">Da vedere</option>
+                    <option value="Visto">Visto</option>
+                </select>
+                <br>
+                <button id="aggiungi-btn" type="submit" class="btn">Aggiungi</button>
+            </form>
+        </section>
+        <section class="card">
+            <h3>Filtri</h3>
+            <input id="ricerca" type="search" placeholder="Cerca per titolo, per regista o per categoria">
+            <select id="watched">
+                <option value="Tutti">Tutti</option>
+                <option value="Visti">Visti</option>
+                <option value="Da vedere">Da vedere</option>
+            </select>
+            <select id="ordinamento">
+                <option value="Seleziona..">Seleziona..</option>
+                <option value="Rating (dal migliore)">Rating (dal migliore)</option>
+                <option value="Rating (dal peggiore)">Rating (dal peggiore)</option>
+            </select>
+            <button id="crescente" type="button" class="btn">Ordina per anno di uscita (crescente)</button>
+            <button id="decrescente" type="button" class="btn">Ordina per anno di uscita (descrescente)</button>
+        </section>
+        <section class="card">
+            <h3>Films</h3>
+            <div id="films"></div>
+        </section>
+        <section class="card" id="film-stats">
+            <h3>Stats</h3>
+            <div class="box-stats">
+                <div class="stat-container">
+                    <span class="stat" id="stat-tot">0</span>
+                    <span class="stat-label">Totale</span>
+                </div>
+                <div class="stat-container">
+                    <span class="stat" id="stat-visti">0</span>
+                    <span class="stat-label">Visti</span>
+                </div>
+                <div class="stat-container">
+                    <span class="stat" id="stat-da-vedere">0</span>
+                    <span class="stat-label">Da vedere</span>
+                </div>
+            </div>
+            <div class="bar-container">
+                <div class="bar-empty">
+                    <div class="bar-fill" id="barra"></div>
+                </div>
+                <span>Percentuale Film Visti : <span id="percentuale"></span></span>
+            </div>
+        </section>
+        <div id="notifica"></div>
+    </main>
+    <footer id="site-footer">
+        <div id="icons-container">
+            <div class="icone">
+                <a href="https://github.com/mattia-pirro/PROGETTO-SETTIMANA-3" target="blank"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="icone">
+                <a href="index.html" target="blank"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            <p>© 2026 CineMatt — Soluzione di riferimento — Epicode Full Stack AI 2026</p>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
