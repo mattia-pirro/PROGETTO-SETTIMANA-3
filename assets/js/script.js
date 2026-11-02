@@ -33,7 +33,7 @@ const films = [
       categoria: 'Azione',
       anno: 1954,
       rating: 5,
-      visto: false,
+      visto: true,
    },
    {
       id: 5,
@@ -53,6 +53,51 @@ const films = [
       rating: 4,
       visto: true,
    },
+   {
+      id: 7,
+      titolo: '8½',
+      regista: 'Federico Fellini',
+      categoria: 'Drammatico',
+      anno: 1963,
+      rating: 4,
+      visto: true,
+   },
+   {
+      id: 8,
+      titolo: '2001: Odissea nello spazio',
+      regista: 'Stanley Kubrick',
+      categoria: 'Fantascienza',
+      anno: 1968,
+      rating: 5,
+      visto: true,
+   },
+   {
+      id: 9,
+      titolo: 'Pulp Fiction',
+      regista: 'Quentin Tarantino',
+      categoria: 'Drammatico',
+      anno: 1994,
+      rating: 3,
+      visto: false,
+   },
+   {
+      id: 10,
+      titolo: 'Indagine su un cittadino al di sopra di ogni sospetto',
+      regista: 'Elio Petri',
+      categoria: 'Thriller',
+      anno: 1970,
+      rating: 5,
+      visto: true,
+   },
+   {
+      id: 11,
+      titolo: 'Memories of Murder',
+      regista: 'Bong Joon-ho',
+      categoria: 'Thriller',
+      anno: 2003,
+      rating: 4,
+      visto: false,
+   },
 ];
 
 const filmsSection = document.querySelector('#films');
@@ -63,10 +108,27 @@ const watched = document.querySelector('#watched');
 const ordinamento = document.querySelector('#ordinamento');
 const btnCrescente = document.querySelector('#crescente');
 const btnDecrescente = document.querySelector('#decrescente');
+const modeButton = document.querySelector('.mode-btn');
+const btnText = document.getElementById('btn-text');
 
 window.onload = () => {
    rendiFilms(films);
 };
+
+modeButton.addEventListener('click', function () {
+   const cssFile = document.getElementById('cssFile');
+   const icona = document.getElementById('icona');
+
+   if (cssFile.href.endsWith('style.css')) {
+      cssFile.href = 'assets/css/style2.css';
+      btnText.textContent = ' Tema chiaro';
+      icona.className = 'fa-solid fa-sun';
+   } else {
+      cssFile.href = 'assets/css/style.css';
+      btnText.textContent = ' Tema scuro';
+      icona.className = 'fa-solid fa-moon';
+   }
+});
 
 function rendiFilms(arrayFilms) {
    filmsSection.textContent = ''
