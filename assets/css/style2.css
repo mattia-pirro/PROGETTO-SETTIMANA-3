@@ -126,12 +126,12 @@ button {
 /* FORM */
 
 .div-form {
-    height: auto;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     gap: 8px;
+    margin-bottom: 14px;
 }
 
 /* LABEL */
@@ -141,6 +141,8 @@ form label,
     font-weight: 500;
     margin-right: 6px;
     font-size: 14px;
+    display: flex;
+    align-items: stretch;
 }
 
 /* CARD */
@@ -151,6 +153,7 @@ form label,
     padding: 20px;
     margin-bottom: 15px;
     border: 1px solid #cccccc;
+    min-width: min-content;
 }
 
 .card h3 {
@@ -163,6 +166,7 @@ form label,
 .input-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 32%;
 }
 
@@ -172,8 +176,6 @@ form label,
     border: 2px solid #1a1a1a;
     border-radius: 6px;
     font-size: 14px;
-    display: inline-block;
-    vertical-align: middle;
     margin-top: 10px;
     margin-bottom: 8px;
     width: 100%;
@@ -196,28 +198,46 @@ form label,
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 8px;
+    gap: 12px;
 }
 
-.btn {
+.div-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1 1 100px;
+    max-width: 400px;
+}
+
+.btn,
+.btn-filtri {
     background-color: #c99718;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: bold;
-    margin-top: 15px;
-    margin-right: 8px;
     cursor: pointer;
 }
 
-.btn:hover {
+.btn-filtri {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover,
+.btn-filtri:hover {
     background-color: #FEBD69;
 }
 
 #crescente,
 #decrescente {
-    width: 35%;
+    height: auto;
+    width: 100%;
+    min-width: min-content;
 }
 
 /* STATS */
