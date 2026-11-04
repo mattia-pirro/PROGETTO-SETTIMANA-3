@@ -40,36 +40,41 @@ button {
     background-color: #1a1a1a;
     color: #ffffff;
     padding: 20px 0;
-    height: 85px;
+    height: max-content;
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
+    min-width: min-content;
 }
 
 .header-content {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-title {
-    float: left;
-    margin-top: 5px;
     cursor: default;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .header-title h1 {
     font-size: 24px;
+    margin: 0;
 }
 
-.header-title h1 i {
+.header-title i {
+    font-size: 24px;
     margin-right: 6px;
-
-}
-
-.header-button {
-    float: right;
-    margin-top: 5px;
 }
 
 .mode-btn {
@@ -80,6 +85,10 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .mode-btn:hover {
@@ -89,7 +98,7 @@ button {
 }
 
 .mode-btn i {
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 /* HERO */
@@ -239,21 +248,28 @@ select:focus {
 /* STATS */
 
 #film-stats {
-    height: auto;
     overflow: hidden;
 }
 
-.box-stats {
-    display: block;
+.film-stats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    text-align: center;
-    margin: 6px 0;
+}
+
+.box-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
 }
 
 .stat-container {
-    display: inline-block;
     text-align: center;
-    margin: 0 24px 0 56px;
+    margin: 8px 24px;
 }
 
 .stat {
@@ -263,22 +279,17 @@ select:focus {
     color: #c99718;
 }
 
-.stat-label {
-    font-size: 11px;
-    color: #666666;
-}
-
 .bar-container {
     width: 100%;
-    margin-top: 10px;
 }
 
 .bar-empty {
+    width: 100%;
     background-color: #f0ede4;
     height: 12px;
     border-radius: 6px;
-    margin-top: 18px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    overflow: hidden;
 }
 
 .bar-fill {
@@ -287,13 +298,15 @@ select:focus {
     border-radius: 6px;
 }
 
-.bar-container span {
+.bar-container span,
+.stat-label {
     font-size: 11px;
     color: #666666;
 }
 
 #percentuale {
     font-weight: bold;
+    color: #c99718;
 }
 
 /* NOTIFICA */
@@ -335,6 +348,7 @@ select:focus {
     text-align: center;
     margin-top: 36px;
     float: end;
+    min-width: min-content;
 }
 
 #icons-container {
@@ -347,7 +361,7 @@ select:focus {
     width: 48px;
     height: 48px;
     background-color: #1a1a1a;
-    margin-left: 12px;
+    margin: 0 6px;
     border: 1px solid white
 }
 
