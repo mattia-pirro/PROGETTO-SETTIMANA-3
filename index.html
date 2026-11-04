@@ -32,51 +32,74 @@
         <section class="card">
             <h3>Aggiungi un film</h3>
             <form>
-                <label for="titolo">Titolo:</label>
-                <input id="titolo" type="text" placeholder="Titolo" required>
-                <label for="regista">Regista:</label>
-                <input id="regista" type="text" placeholder="Regista" required>
-                <label for="rating">Rating:</label>
-                <select id="rating" required>
-                    <option value="Seleziona..">Seleziona..</option>
-                    <option value="5☆">5☆</option>
-                    <option value="4☆">4☆</option>
-                    <option value="3☆">3☆</option>
-                    <option value="2☆">2☆</option>
-                    <option value="1☆">1☆</option>
-                </select>
-                <label for="anno">Anno:</label>
-                <input id="anno" type="number" placeholder="Anno di uscita" required>
-                <label for="categoria">Categoria:</label>
-                <input id="categoria" type="text" placeholder="Categoria" required>
-                <label for="scelta">Stato:</label>
-                <select id="scelta" required>
-                    <option value="Seleziona..">Seleziona..</option>
-                    <option value="Da vedere">Da vedere</option>
-                    <option value="Visto">Visto</option>
-                </select>
-                <br>
+                <div class="div-form">
+                    <div class="input-container">
+                        <label for="titolo">Titolo:</label>
+                        <input id="titolo" type="text" placeholder="Titolo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="regista">Regista:</label>
+                        <input id="regista" type="text" placeholder="Regista" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="anno">Anno:</label>
+                        <input id="anno" type="number" placeholder="Anno di uscita" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="categoria">Categoria:</label>
+                        <input id="categoria" type="text" placeholder="Categoria" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" required>
+                            <option value="Seleziona..">Seleziona..</option>
+                            <option value="5☆">5☆</option>
+                            <option value="4☆">4☆</option>
+                            <option value="3☆">3☆</option>
+                            <option value="2☆">2☆</option>
+                            <option value="1☆">1☆</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="scelta">Stato:</label>
+                        <select id="scelta" required>
+                            <option value="Seleziona..">Seleziona..</option>
+                            <option value="Da vedere">Da vedere</option>
+                            <option value="Visto">Visto</option>
+                        </select>
+                    </div>
+                </div>
                 <button id="aggiungi-btn" type="submit" class="btn">Aggiungi</button>
             </form>
         </section>
-        <section class="card" id="filtri">
+        <section class="card">
             <h3>Filtri</h3>
-            <label for="ricerca">Cerca film:</label>
-            <input id="ricerca" type="search" placeholder="Cerca per titolo, per regista o per categoria">
-            <label for="watched">Filtra per stato:</label>
-            <select id="watched">
-                <option value="Tutti">Tutti</option>
-                <option value="Visti">Visti</option>
-                <option value="Da vedere">Da vedere</option>
-            </select>
-            <label for="ordinamento">Ordina per rating:</label>
-            <select id="ordinamento">
-                <option value="Seleziona..">Seleziona..</option>
-                <option value="Rating (dal migliore)">Rating (dal migliore)</option>
-                <option value="Rating (dal peggiore)">Rating (dal peggiore)</option>
-            </select>
-            <button id="crescente" type="button" class="btn">Ordina per anno di uscita (crescente)</button>
-            <button id="decrescente" type="button" class="btn">Ordina per anno di uscita (descrescente)</button>
+            <div class="div-form">
+                <div class="input-container">
+                    <label for="ricerca">Cerca film:</label>
+                    <input id="ricerca" type="search" placeholder="Cerca per titolo, per regista o per categoria">
+                </div>
+                <div class="input-container">
+                    <label for="watched">Filtra per stato:</label>
+                    <select id="watched">
+                        <option value="Tutti">Tutti</option>
+                        <option value="Visti">Visti</option>
+                        <option value="Da vedere">Da vedere</option>
+                    </select>
+                </div>
+                <div class="input-container">
+                    <label for="ordinamento">Ordina per rating:</label>
+                    <select id="ordinamento">
+                        <option value="Seleziona..">Seleziona..</option>
+                        <option value="Rating (dal migliore)">Rating (dal migliore)</option>
+                        <option value="Rating (dal peggiore)">Rating (dal peggiore)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div-form-buttons">
+                <button id="crescente" type="button" class="btn">Ordina per anno di uscita (crescente)</button>
+                <button id="decrescente" type="button" class="btn">Ordina per anno di uscita (descrescente)</button>
+            </div>
         </section>
         <section class="card">
             <h3>Films</h3>

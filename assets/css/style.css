@@ -123,6 +123,17 @@ button {
     margin-bottom: 0;
 }
 
+/* FORM */
+
+.div-form {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+
 /* LABEL */
 
 form label,
@@ -149,6 +160,12 @@ form label,
 
 /* INPUT - SELECT */
 
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
 .card input,
 .card select {
     padding: 10px;
@@ -159,34 +176,26 @@ form label,
     vertical-align: middle;
     margin-top: 10px;
     margin-bottom: 8px;
-    width: 27%;
-    margin-right: 0.5%;
-}
-
-#filtri input,
-#filtri select {
-    padding: 10px;
-    border: 2px solid #cccccc;
-    border-radius: 6px;
-    font-size: 14px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 10px;
-    margin-bottom: 8px;
-    width: 23%;
-    margin-right: 1%;
+    width: 100%;
 }
 
 input:focus,
-select:focus,
-#filtri input:focus,
-#filtri select:focus {
+select:focus {
     border-color: #333333;
     background-color: #f4f4f0;
     color: #333333;
 }
 
 /* BUTTON */
+
+.div-form-buttons {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 8px;
+}
 
 .btn {
     background-color: #c99718;
@@ -202,6 +211,11 @@ select:focus,
 
 .btn:hover {
     background-color: #FEBD69;
+}
+
+#crescente,
+#decrescente {
+    width: 35%;
 }
 
 /* STATS */
