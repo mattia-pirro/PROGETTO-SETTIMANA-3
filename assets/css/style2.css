@@ -109,19 +109,22 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     color: #f4f4f0e6;
-    padding: 340px 0;
     text-align: center;
-    height: 710px;
     width: 100%;
+    position: relative;
+    height: 90vh;
 }
 
 .hero h5 {
     background-color: rgba(0, 0, 0, 0.65);
-    text-align: center;
     border: 1px solid #f4f4f0e6;
-    width: 35%;
-    margin: auto;
-    padding: 10px 5px;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 6px;
+    margin: 0;
 }
 
 /* MAIN */
